@@ -19,7 +19,7 @@ dataset.head()
 
 
 #assign X and y
-X = dataset.iloc[:, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]].values
+X = dataset.iloc[:,1:].values
 y = dataset.iloc[:, [0]].values
 #X = pd.DataFrame(X)
 #y = pd.DataFrame(y)
@@ -171,7 +171,7 @@ req2=np.array(['b', 's', 'w', 't', 'l', 'f', 'c', 'b', 'n', 'e', 'c', 's', 's',
 req5=np.array(['x', 'y', 'y', 't', 'a', 'f', 'c', 'b', 'n', 'e', 'c', 's', 's',
        'w', 'w', 'p', 'w', 'o', 'p', 'k', 'n', 'g'])
 
-input_array=dataset.iloc[:, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]].values
+input_array=dataset.iloc[:,1:].values
 new_array=np.vstack([input_array, req0])
 #new_array[8124]
 
@@ -217,8 +217,6 @@ ynew = classifier.predict_classes(test)
 for i in range(len(test)):
     print("X=%s, Predicted=%s" % (test[i], ynew[i]))
 
-
-# In[ ]:
 
 
 
